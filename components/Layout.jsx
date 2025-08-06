@@ -4,7 +4,7 @@ function Layout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow mb-[30px]">{children}</main>
       <Footer />
     </div>
   );
@@ -14,9 +14,9 @@ export default Layout;
 
 function Header() {
   return (
-    <div className="bg-[#FDFDF5] flex justify-between items-center p-4">
+    <div className="border-b border-gray-300  flex justify-between items-center p-4">
       <Logo />
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 ">
         <a href="/#tools" className="underline">
           Tools
         </a>
@@ -44,9 +44,9 @@ function Footer() {
 
 function Logo() {
   return (
-    <a href="/" className="flex items-center gap-2">
+    <a href="/" className="flex items-center gap-2 ">
       <span className="font-medium text-xl">convert</span>
-      <FaShieldCat className="text-3xl text-[#000000]" />
+      <FaShieldCat className="text-3xl text-[#c8553d]" />
     </a>
   );
 }

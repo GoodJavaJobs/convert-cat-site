@@ -91,7 +91,7 @@
 }
 
 .markdown-content-width--large {
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .markdown-content {
@@ -360,79 +360,65 @@
   }
 }
 
-/** single product highlight*/
-
-.cc-single-product-highlight-container {
-  display: flex;
-  gap: 25px;
-  background-color: white;
-  border: 4px solid black;
-  padding: 20px;
-  position: relative;
-  align-items: center;
-}
-
-.cc-single-product-highlight-text {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  background-color: black;
-  color: white;
-  padding: 5px 15px;
-  font-weight: bold;
-  border-radius: 4px;
-  transform: rotate(-10deg);
-}
-
-.cc-single-product-highlight-container > div {
-  flex-basis: 50%;
-}
-
-.cc-single-product-highlight-container img {
-  box-shadow: none !important;
-}
-
-.cc-single-product-content-container h2,
-.cc-single-product-content-container p,
-.cc-single-product-content-container a {
-  margin: 0px;
-}
-
-.cc-single-product-content-container .title {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 5px !important;
-}
-
-.cc-single-product-content-container .sub-title {
-  font-size: 16px;
-  margin-bottom: 13px;
-  font-style: italic;
-}
-
-.cc-single-product-content-container .description {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.cc-single-product-content-container .cta-btn {
+/* React Tabs Styling */
+.react-tabs {
   width: 100%;
-  background-color: black;
-  color: white;
-  display: block;
-  text-align: center;
-  padding: 6px;
-  border-radius: 8px;
-  font-weight: bold;
+  margin-top: 20px;
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 !important;
+  border-bottom: 2px solid #e5e5e5;
+  padding-left: 0 !important;
+}
+
+.react-tabs__tab {
+  padding: 12px 24px;
+  list-style: none !important;
+  margin: 0 !important;
   cursor: pointer;
+  color: #737373;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.react-tabs__tab--selected {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.react-tabs__tab:focus {
+  outline: none;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+  padding: 20px 0;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
 }
 
 @media (max-width: 768px) {
-  .cc-single-product-highlight-container {
-    flex-direction: column;
+  .react-tabs__tab {
+    padding: 8px 16px;
+    font-size: 14px;
   }
+}
 
-  .cc-single-product-highlight-text {
-    left: -10px;
-  }
+/** tool input container **/
+
+.tool-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tool-input-container > * {
+  flex: 1 1 300px;
 }
