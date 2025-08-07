@@ -1,10 +1,11 @@
 import { FaShieldCat } from "react-icons/fa6";
+import EmailCaptureForm from "./ui/EmailCaptureForm";
 
 function Layout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow mb-[30px]">{children}</main>
+      <main className="flex-grow ">{children}</main>
       <Footer />
     </div>
   );
@@ -27,18 +28,21 @@ function Header() {
 
 function Footer() {
   return (
-    <div className="bg-black p-4 text-white text-center mt-auto">
-      <div>© 2025 Convert Cat</div>
-      <div className="mt-2 flex justify-center gap-4">
-        <a className="underline" href="mailto:sjois@fulltimecyber.com">
-          Contact
-        </a>
+    <>
+      <EmailCaptureForm />
+      <div className="bg-black p-4 text-white text-center mt-auto">
+        <div>© 2025 Convert Cat</div>
+        <div className="mt-2 flex justify-center gap-4">
+          <a className="underline" href="mailto:sjois@fulltimecyber.com">
+            Contact
+          </a>
 
-        <a className="underline" href="/privacy">
-          Privacy
-        </a>
+          <a className="underline" href="/privacy">
+            Privacy
+          </a>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

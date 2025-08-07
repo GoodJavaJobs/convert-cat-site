@@ -1,5 +1,6 @@
 import ContentContainer from "@/components/ContentContainer";
 import Layout from "@/components/Layout";
+import EmailCaptureForm from "@/components/ui/EmailCaptureForm";
 
 export default function Home() {
   return (

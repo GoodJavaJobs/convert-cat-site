@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import ToolTabs from "@/components/ui/ToolTabs";
 import { TabPanel } from "react-tabs";
 import TextInput from "@/components/ui/TextInput";
+import Youtube from "@/components/ui/Youtube";
 
 function WirecutterProductBlogPost() {
   return (
@@ -16,6 +17,8 @@ function WirecutterProductBlogPost() {
           How To Add Wirecutter Like Beautiful Product Cards to Shopify Blog
           Post
         </h1>
+
+        <Youtube videoID="D7h_sZxK27A" />
 
         <ContentHighlight
           heading="Highlight A Single Product"

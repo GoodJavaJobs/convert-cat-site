@@ -9,6 +9,7 @@ import CopyCode from "@/components/ui/CopyCode";
 import TabPanelSection from "@/components/ui/TabPanelSection";
 import TextInput from "@/components/ui/TextInput";
 import ToolTabs from "@/components/ui/ToolTabs";
+import Youtube from "@/components/ui/Youtube";
 import { useEffect, useState } from "react";
 import { TabPanel } from "react-tabs";
 
@@ -18,14 +19,7 @@ function ShoppableProductBlogPost() {
       <ContentContainer large={true}>
         <h1>How Add Products To Your Shopify Blog Post</h1>
 
-        <ContentHighlight
-          heading="Show Multiple Products"
-          description={`Show multiple products in a grid design on your blog posts. Ideal for both listcle and info articles. You can use the 
-            <strong className="underline">input fields below to</strong>&nbsp;
-            customize the design.`}
-        >
-          <MultipleProductsHighlight />
-        </ContentHighlight>
+        <Youtube videoID="gwHm-6rACtQ" />
 
         <div className="my-10" id="metafields">
           <h2 className="font-bold underline ">
@@ -43,6 +37,15 @@ function ShoppableProductBlogPost() {
             <CopyCode label="CSS" code={multiple_products_in_article_css} />
           </div>
         </div>
+
+        <ContentHighlight
+          heading="Embed Products Manually using HTML"
+          description={`Show multiple products in a grid design on your blog posts. Ideal for both listcle and info articles. You can use the 
+            <strong className="underline">input fields below to</strong>&nbsp;
+            customize the design.`}
+        >
+          <MultipleProductsHighlight />
+        </ContentHighlight>
       </ContentContainer>
     </Layout>
   );
