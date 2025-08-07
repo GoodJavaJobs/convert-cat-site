@@ -8,22 +8,18 @@ function EmailCaptureForm() {
     e.preventDefault();
     setStatus("submitting");
 
-    // Replace this URL with your Mailchimp form action URL
-    const MAILCHIMP_URL =
-      "https://fulltimecyber.us21.list-manage.com/subscribe/post?u=ee4a9d926b3e297c6904e45ed&amp;id=dd32f7be5b&amp;f_id=00af41e6f0";
-
     try {
-      const response = await fetch(MAILCHIMP_URL, {
+      const response = await fetch("/api/subscribe", {
         method: "POST",
-        body: new URLSearchParams({
-          EMAIL: email,
-        }),
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "application/json",
         },
+        body: JSON.stringify({ email }),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (data.success) {
         setStatus("success");
         setEmail("");
       } else {
