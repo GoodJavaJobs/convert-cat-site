@@ -27,7 +27,7 @@ function ShoppableProductBlogPost() {
           <MultipleProductsHighlight />
         </ContentHighlight>
 
-        <div className="my-10">
+        <div className="my-10" id="metafields">
           <h2 className="font-bold underline ">
             Show Products Using Metafields
           </h2>
