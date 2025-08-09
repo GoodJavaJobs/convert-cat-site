@@ -1,19 +1,10 @@
-<html>
-  <head> </head>
-  <body
-    style="
-      width: 400px;
-      margin-top: 50px;
-      margin-left: auto;
-      margin-right: auto;
-    "
-  >
-    <div class="convert-cat-shipping-protection-container">
+export const getShippingProtectionCode = (content) => {
+  return `<div class="convert-cat-shipping-protection-container">
       <div>
         <svg
           id="convert-cat-shipping-protection-icon"
-          width="55"
-          height="55"
+          width="50"
+          height="50"
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -37,19 +28,20 @@
       </div>
       <div>
         <div class="convert-cat-shipping-protection-header">
-          <p class="shipping-title">Shipping Protection ($12)</p>
-          <div>
+          <p class="shipping-title">${content.title} (${content.price})</p>
+          
             <label class="convert-cat-switch">
               <input type="checkbox" id="convert-cat-toggle" />
               <span class="convert-cat-slider"></span>
             </label>
-          </div>
+        
         </div>
-        <p>Protects your purchase from damage or loss during shipping.</p>
+        <p>${content.description}</p>
       </div>
     </div>
 
-    <style>
+
+<style>
       .convert-cat-shipping-protection-container {
         display: flex;
         gap: 15px;
@@ -60,6 +52,8 @@
 
       .convert-cat-shipping-protection-container p {
         margin: 0px !important;
+font-size: 12px;
+line-height: 1.6;
       }
 
       .convert-cat-shipping-protection-header {
@@ -67,10 +61,13 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 7px;
+gap:10px;
       }
 
       .convert-cat-shipping-protection-header .shipping-title {
         font-weight: bold;
+font-size: 14px;
+line-height:1.4;
       }
 
       .convert-cat-switch {
@@ -131,9 +128,9 @@
       }
     </style>
 
-    <script>
+     <script>
       const toggle = document.getElementById("convert-cat-toggle");
-      const VARIANT_ID = 12345678901234;
+      const VARIANT_ID = ${content.variantID};
 
       toggle.addEventListener("change", function () {
         const icon = document.getElementById(
@@ -170,6 +167,5 @@
             .catch((err) => console.error(err));
         }
       });
-    </script>
-  </body>
-</html>
+    </script>`;
+};

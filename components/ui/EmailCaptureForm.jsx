@@ -27,10 +27,16 @@ function EmailCaptureForm() {
 
   return (
     <div className="max-w-md my-[40px] mx-auto p-6 text-white rounded-lg shadow-md bg-[#c8553d]">
-      <h2 className="text-2xl font-bold text-white mt-0">
+      <h2
+        className="text-2xl font-bold text-white mt-0"
+        style={{ marginTop: "0px ", color: "white", marginBottom: "0px" }}
+      >
         Unlock More Free Tools to Grow Your Shopify Store
       </h2>
-      <p className="mb-6 mt-2">
+      <p
+        className="mb-6 mt-2"
+        style={{ marginTop: "10px", marginBottom: "25px" }}
+      >
         Just real tools, strategies, and tips that help you grow your Shopify
         business.
       </p>

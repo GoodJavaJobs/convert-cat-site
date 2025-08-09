@@ -1,6 +1,5 @@
 import ContentContainer from "@/components/ContentContainer";
 import Layout from "@/components/Layout";
-import EmailCaptureForm from "@/components/ui/EmailCaptureForm";
 
 export default function Home() {
   return (
@@ -18,6 +17,11 @@ export default function Home() {
           <li>
             <a href="/tools/add-wirecutter-like-product-cards-to-blog-post">
               Add Wirecutter Like Product Cards To Your Shopify Blog Post
+            </a>
+          </li>
+          <li>
+            <a href="/tools/how-to-offer-shipping-insurance-without-app">
+              How To Offer Shipping Insurance Without Using Any App
             </a>
           </li>
         </ul>
