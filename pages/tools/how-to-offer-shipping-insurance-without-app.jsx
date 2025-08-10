@@ -17,7 +17,7 @@ function ShippingProtection() {
           How To Offer Shipping Insurance On Products Without Using Any App
         </h1>
 
-        <Youtube />
+        <Youtube videoID="1borF30RXrk" />
 
         <ContentHighlight
           heading="Shipping Insurance Widget"
