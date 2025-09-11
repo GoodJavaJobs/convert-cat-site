@@ -90,7 +90,9 @@ function StickyHeader() {
           </a>
 
           {/* CTA Button */}
-          <Button href="/#sections">Browse</Button>
+          <div className="hidden md:block">
+            <Button href="/#sections">Browse</Button>
+          </div>
         </div>
       </div>
     </header>
