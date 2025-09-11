@@ -1,0 +1,195 @@
+<html>
+  <head>
+    <style>
+      img {
+        max-width: 100%;
+      }
+
+      .cc-bb-container {
+        display: flex;
+        gap: 60px;
+      }
+
+      .cc-bb-container .cc-bb-categories-container {
+        flex-basis: 70%;
+      }
+
+      .cc-bb-container .cc-bb-status-container {
+        flex-basis: 30%;
+      }
+
+      .cc-bb-category-products-container {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .cc-bb-category-product {
+        flex-basis: calc(33.33% - 20px);
+      }
+
+      .cc-bb-categories-container .cc-bb-category-heading {
+        margin-top: 0px;
+        margin-bottom: 8px;
+      }
+
+      .cc-bb-categories-container .cc-bb-category-description {
+        margin-top: 0px;
+        margin-bottom: 25px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .cc-bb-container {
+          flex-direction: column;
+        }
+      }
+
+      .cc-bb-category-product img,
+      .cc-bb-category-product p {
+        margin-bottom: 0px;
+      }
+
+      .cc-bb-category-product .cc-bb-category-product-img {
+        border-radius: 10px;
+      }
+
+      .cc-bb-category-product .cc-bb-category-product-heading {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .cc-bb-category-product .cc-bb-category-product-description {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .cc-bb-category-product .cc-bb-category-product-price {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .cc-bb-category-product .cc-bb-category-product-add-btn {
+        border: 1.5px solid black;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .cc-bb-category-product > * + * {
+        margin-top: 12px;
+      }
+
+      .cc-bb-status-header > * + * {
+        margin-top: 10px;
+      }
+
+      .cc-bb-status-header {
+        margin-bottom: 30px;
+      }
+
+      .cc-bb-status-header .cc-bb-status-header-title,
+      .cc-bb-status-header .cc-bb-status-header-description {
+        margin-bottom: 0px;
+        text-align: center;
+      }
+
+      .cc-bb-status-header-title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body style="padding: 40px">
+    <div class="cc-bb-container">
+      <!-- left side  -->
+      <div class="cc-bb-categories-container">
+        <!-- Category-->
+        <div class="cc-bb-category-container">
+          <h2 class="cc-bb-category-heading">Gummies</h2>
+          <p class="cc-bb-category-description">
+            Forget about complicated brewing or blending - simply pop one of
+            these delicious gummies into your mouth and let it work its
+            cognitive magic.
+          </p>
+          <!--Category Products-->
+          <div class="cc-bb-category-products-container">
+            <!--Category Product-->
+            <div class="cc-bb-category-product">
+              <img
+                class="cc-bb-category-product-img"
+                src="https://eatfungies.com/cdn/shop/files/Fungies-Lions-Mane-Mushroom-Gummies-Hero.jpg?v=1734979959&width=1200"
+              />
+              <p class="cc-bb-category-product-heading">
+                Lion’s Mane Mushroom Gummies
+              </p>
+              <p class="cc-bb-category-product-description">
+                Cherry Limeade Flavor
+              </p>
+              <p class="cc-bb-category-product-price">$29.99</p>
+              <div class="cc-bb-category-product-add-btn">Add</div>
+            </div>
+
+            <!--Category Product-->
+            <div class="cc-bb-category-product">
+              <img
+                class="cc-bb-category-product-img"
+                src="https://eatfungies.com/cdn/shop/files/Fungies-Lions-Mane-Mushroom-Gummies-Hero.jpg?v=1734979959&width=1200"
+              />
+              <p class="cc-bb-category-product-heading">
+                Lion’s Mane Mushroom Gummies
+              </p>
+              <p class="cc-bb-category-product-description">
+                Cherry Limeade Flavor
+              </p>
+              <p class="cc-bb-category-product-price">$29.99</p>
+              <div class="cc-bb-category-product-add-btn">Add</div>
+            </div>
+
+            <!--Category Product-->
+            <div class="cc-bb-category-product">
+              <img
+                class="cc-bb-category-product-img"
+                src="https://eatfungies.com/cdn/shop/files/Fungies-Lions-Mane-Mushroom-Gummies-Hero.jpg?v=1734979959&width=1200"
+              />
+              <p class="cc-bb-category-product-heading">
+                Lion’s Mane Mushroom Gummies
+              </p>
+              <p class="cc-bb-category-product-description">
+                Cherry Limeade Flavor
+              </p>
+              <p class="cc-bb-category-product-price">$29.99</p>
+              <div class="cc-bb-category-product-add-btn">Add</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side-->
+      <div class="cc-bb-status-container">
+        <!--Bundle Builder Header-->
+        <div class="cc-bb-status-header">
+          <p class="cc-bb-status-header-title">
+            Save up to 20% with your own bundle!
+          </p>
+          <p class="cc-bb-status-header-description">
+            Choose 3 or more products to get the best price per unit.
+          </p>
+        </div>
+        <!--Added Products Container-->
+        <div class="cc-bb-added-products-container">
+          <!--Added Product-->
+          <div class="cc-bb-added-product"></div>
+        </div>
+
+        <!--Add To Cart Button-->
+        <div class="cc-bb-add-to-cart-btn">Add To Cart</div>
+      </div>
+    </div>
+  </body>
+</html>

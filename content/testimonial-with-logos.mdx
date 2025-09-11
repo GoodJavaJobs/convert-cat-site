@@ -1,0 +1,219 @@
+---
+title: "Testimonial with Logo Section"
+description: "Build trust and improve conversion by adding this sleek authority testimonial section to your product pages on Shopify."
+img: "/testimonial-section.gif"
+url: "/content/testimonial-with-logos"
+---
+
+<img src="/testimonial-section.gif" />
+
+To add this section to your store, please copy the below code and follow the instructions in the video below.
+
+<strong>Liquid Code:</strong>
+
+<CodeSnippet
+  code={`{% comment %}
+  Testimonial with Logos Section
+  - Merchants can add 2–4 logos
+  - Each logo has: image + testimonial
+{% endcomment %}<div  style="
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  ">
+
+<div class="convert-cat-tst-container" >
+  <!-- Testimonial text -->
+  <div 
+    class="convert-cat-tst-testimonail-container" 
+    id="convert-cat-tst-testimonial" style="  font-weight: {{ section.settings.font_weight }}; color: {{ section.settings.text_color }}; font-size: {{ section.settings.font_size }}px;"
+  >
+    {% if section.blocks[0].settings.testimonial != blank %}
+    "{{ section.blocks[0].settings.testimonial }}"
+  {% else %}
+    "These are the softest, stretchiest, comfiest boxer-style shorts you're likely to find anywhere."
+  {% endif %}
+  </div>
+
+  <!-- Logos -->
+
+  <div class="convert-cat-tst-logos-container">
+    {% for block in section.blocks %}
+      <img
+        data-active="{% if forloop.first %}true{% else %}false{% endif %}"
+        data-testimonial="{{ block.settings.testimonial | escape }}"
+       src="{% if block.settings.logo != blank %}{{ block.settings.logo | image_url: width: 240 }}{% else %}https://www.jambys.com/cdn/shop/files/wired_x110_c01e2476-cc5b-4d48-9f69-b2a40434542f_240x.png?v=1643156788{% endif %}"
+        alt="{{ block.settings.logo.alt | escape }}" width="" height=""
+      />
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const testimonialBox = document.getElementById(
+      "convert-cat-tst-testimonial"
+    );
+    const logos = document.querySelectorAll(
+      ".convert-cat-tst-logos-container img"
+    );
+
+    logos.forEach((logo) => {
+      logo.addEventListener("click", () => {
+        // Update testimonial text
+        testimonialBox.textContent = '"' + logo.dataset.testimonial + '"';
+
+        // Update active state
+        logos.forEach((l) => (l.dataset.active = "false"));
+        logo.dataset.active = "true";
+      });
+    });
+  });
+</script>
+
+<style>
+  .convert-cat-tst-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.convert-cat-tst-testimonail-container {
+line-height: 1.5;
+text-align: center;
+margin-bottom:25px;  
+}
+
+.convert-cat-tst-logos-container {
+display: flex;
+gap: 40px;
+justify-content: center;
+align-items: center;
+}
+
+.convert-cat-tst-logos-container img[data-active="false"] {
+filter: grayscale(100%);
+opacity: 0.4;
+}
+
+.convert-cat-tst-logos-container img {
+width: 100px;
+cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+.convert-cat-tst-logos-container {
+flex-wrap: wrap;
+gap: 30px;
+}
+
+.convert-cat-tst-logos-container img {
+width: 100px;
+}
+
+.convert-cat-tst-container {
+max-width: 100%;
+padding: 20px;
+}
+}
+
+</style>{% schema %}
+
+{
+"name": "Testimonial with Logos",
+"max_blocks": 4,
+
+"settings": [
+{
+"type": "color",
+"id": "bg_color",
+"label": "Background color",
+"default": "#F3F4F9"
+},
+{
+"type": "color",
+"id": "text_color",
+"label": "Text color",
+"default": "#35409A"
+},
+{
+"type": "range",
+"id": "font_size",
+"label": "Font size (px)",
+"min": 12,
+"max": 48,
+"step": 1,
+"default": 18
+},
+{
+"type": "select",
+"id": "font_weight",
+"label": "Font weight",
+"default": "bold",
+"options": [
+{ "value": "normal", "label": "Normal" },
+{ "value": "bold", "label": "Bold" }
+]
+},
+{
+"type": "range",
+"id": "padding_top",
+"label": "Padding top (px)",
+"min": 0,
+"max": 100,
+"step": 4,
+"default": 40
+},
+{
+"type": "range",
+"id": "padding_bottom",
+"label": "Padding bottom (px)",
+"min": 0,
+"max": 100,
+"step": 4,
+"default": 40
+}
+],
+"blocks": [
+{
+"type": "logo",
+"name": "Logo + Testimonial",
+"settings": [
+{
+"type": "image_picker",
+"id": "logo",
+"label": "Logo image"
+},
+{
+"type": "text",
+"id": "testimonial",
+"label": "Testimonial text"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Testimonial with Logos",
+"blocks": [
+{ "type": "logo" },
+{ "type": "logo" }
+]
+}
+]
+}
+{% endschema %}
+
+`}
+/>
+
+To install, please watch the below video <strong>(takes 2-3 minutes
+approx):</strong>
+
+<a
+  class="youtube-video"
+  href="https://www.youtube.com/watch?v=H_VAb5AhJ8w"
+  target="_blank"
+>
+  Watch Youtube Video
+</a>

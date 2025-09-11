@@ -158,7 +158,8 @@
 .markdown-content p {
   margin: 1.4rem 0;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 16px;
+  color: #000;
 }
 
 /* Links */
@@ -171,39 +172,6 @@
 
 .markdown-content a:hover {
   border-bottom-color: #0969da;
-}
-
-/* Lists */
-.markdown-content ul,
-.markdown-content ol {
-  margin: 0.75rem 0;
-  padding-left: 1.5rem;
-}
-
-.markdown-content li {
-  margin: 0.25rem 0;
-  line-height: 1.6;
-  font-size: 18px;
-}
-
-.markdown-content ul li {
-  list-style-type: disc;
-}
-
-.markdown-content ol li {
-  list-style-type: decimal;
-}
-
-.markdown-content li::marker {
-  color: #9b9a97;
-}
-
-/* Nested lists */
-.markdown-content ul ul,
-.markdown-content ol ol,
-.markdown-content ul ol,
-.markdown-content ol ul {
-  margin: 0.25rem 0;
 }
 
 /* Blockquotes */
@@ -221,32 +189,6 @@
 }
 
 /* Code */
-.markdown-content code {
-  font-family: "SFMono-Regular", "Monaco", "Inconsolata", "Roboto Mono",
-    monospace;
-  font-size: 0.875rem;
-  background-color: #f1f1ef;
-  color: #eb5757;
-  padding: 0.125rem 0.25rem;
-  border-radius: 3px;
-}
-
-.markdown-content pre {
-  margin: 1rem 0;
-  padding: 1rem;
-  background-color: #f7f6f3;
-  border-radius: 6px;
-  overflow-x: auto;
-  border: 1px solid #e1e1e0;
-}
-
-.markdown-content pre code {
-  background-color: transparent;
-  color: #37352f;
-  padding: 0;
-  font-size: 0.875rem;
-  line-height: 1.4;
-}
 
 /* Tables */
 .markdown-content table {
@@ -290,6 +232,10 @@
   margin: 1rem 0;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.code p {
+  color: white;
 }
 
 /* Strong and Emphasis */
@@ -439,4 +385,20 @@
 
 .tool-input-container > * {
   flex: 1 1 300px;
+}
+
+.youtube-video {
+  background-color: red;
+  color: white;
+  display: block;
+  width: fit-content;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.youtube-video p {
+  margin: 0px;
+  color: white;
+  font-weight: bold;
 }
