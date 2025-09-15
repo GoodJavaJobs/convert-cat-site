@@ -1,0 +1,360 @@
+---
+title: "Optimized Hero Section"
+description: "Add this beuatiful, cro optimized hero section to your shopify store and grab attention instantly."
+img: "/optimized-hero-section.png"
+url: "/content/optimized-hero-section"
+---
+
+<img src="/optimized-hero-section.png" />
+
+To add this section to your store, please copy the below liquid and follow the video below:
+
+<strong>Liquid Code:</strong>
+
+<CodeSnippet
+  code={`<section 
+  class="convert-cat-optimized-hero-container" 
+  style="background-color: {{ section.settings.section_bg }}; color: {{ section.settings.section_text_color }};"
+>
+  <div class="convert-cat-optimized-hero-content-container ">
+
+    <!-- Review Stars -->
+    <div class="convert-cat-optimized-hero-review-block">
+      <div class="stars">
+        {% for i in (1..5) %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="{{ section.settings.button_bg }}">
+            <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+          </svg>
+        {% endfor %}
+      </div>
+      <div class="review-text" style="color: {{ section.settings.section_text_color }}">{{ section.settings.review_text }}</div>
+    </div>
+
+    <!-- Heading & Description -->
+    <div class="convert-cat-optimized-hero-text-container">
+      <h1 style="color: {{ section.settings.section_text_color }}">{{ section.settings.heading }}</h1>
+
+      <div class="convert-cat-optimized-hero-bullets" >
+          <div  style="background-color: {{ section.settings.bullet_bg }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20"><path fill="{{ section.settings.button_bg }}" d="m8.46 1.897l.99.39a1.5 1.5 0 0 0 1.099 0l.99-.39a2.418 2.418 0 0 1 3.102 1.285l.424.975a1.5 1.5 0 0 0 .777.777l.975.424a2.418 2.418 0 0 1 1.285 3.103l-.39.99a1.5 1.5 0 0 0 0 1.098l.39.99a2.418 2.418 0 0 1-1.285 3.102l-.975.424a1.499 1.499 0 0 0-.777.777l-.424.975a2.418 2.418 0 0 1-3.103 1.285l-.99-.39a1.5 1.5 0 0 0-1.098 0l-.99.39a2.418 2.418 0 0 1-3.102-1.285l-.424-.975a1.5 1.5 0 0 0-.777-.777l-.975-.424a2.418 2.418 0 0 1-1.285-3.103l.39-.99a1.5 1.5 0 0 0 0-1.098l-.39-.99a2.418 2.418 0 0 1 1.285-3.102l.975-.424a1.5 1.5 0 0 0 .777-.777l.424-.975a2.418 2.418 0 0 1 3.103-1.285Zm4.166 5.77l-3.648 4.104l-1.625-1.625a.5.5 0 0 0-.707.707l2 2a.5.5 0 0 0 .727-.021l4-4.5a.5.5 0 0 0-.747-.665Z"></path></svg>
+            <div style="color: {{ section.settings.section_text_color }}">{{ section.settings.bullet_text_1 }}</div>
+          </div>
+
+          <div  style="background-color: {{ section.settings.bullet_bg }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20"><path fill="{{ section.settings.button_bg }}" d="m8.46 1.897l.99.39a1.5 1.5 0 0 0 1.099 0l.99-.39a2.418 2.418 0 0 1 3.102 1.285l.424.975a1.5 1.5 0 0 0 .777.777l.975.424a2.418 2.418 0 0 1 1.285 3.103l-.39.99a1.5 1.5 0 0 0 0 1.098l.39.99a2.418 2.418 0 0 1-1.285 3.102l-.975.424a1.499 1.499 0 0 0-.777.777l-.424.975a2.418 2.418 0 0 1-3.103 1.285l-.99-.39a1.5 1.5 0 0 0-1.098 0l-.99.39a2.418 2.418 0 0 1-3.102-1.285l-.424-.975a1.5 1.5 0 0 0-.777-.777l-.975-.424a2.418 2.418 0 0 1-1.285-3.103l.39-.99a1.5 1.5 0 0 0 0-1.098l-.39-.99a2.418 2.418 0 0 1 1.285-3.102l.975-.424a1.5 1.5 0 0 0 .777-.777l.424-.975a2.418 2.418 0 0 1 3.103-1.285Zm4.166 5.77l-3.648 4.104l-1.625-1.625a.5.5 0 0 0-.707.707l2 2a.5.5 0 0 0 .727-.021l4-4.5a.5.5 0 0 0-.747-.665Z"></path></svg>
+            <div style="color: {{ section.settings.section_text_color }}">{{ section.settings.bullet_text_2 }}</div>
+          </div>
+      </div>
+
+      <p style="color: {{ section.settings.section_text_color }}">{{ section.settings.description }}</p>
+    </div>
+
+    <!-- Button -->
+    <div class="convert-cat-hero-btn-parent-container">
+    <div class="convert-cat-optimized-hero-btn-container ">
+      <a href="{{ section.settings.button_link }}"
+         style="background-color: {{ section.settings.button_bg }}; color: {{ section.settings.button_text_color }};">
+        {{ section.settings.button_text }}
+      </a>
+    </div>
+
+     <div class="convert-cat-optimized-hero-icon-text">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256"><path fill="{{ section.settings.button_bg }}" d="M173.66 98.34a8 8 0 0 1 0 11.32l-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32L112 148.69l50.34-50.35a8 8 0 0 1 11.32 0ZM232 128A104 104 0 1 1 128 24a104.11 104.11 0 0 1 104 104Zm-16 0a88 88 0 1 0-88 88a88.1 88.1 0 0 0 88-88Z"></path></svg>
+      <div style="color: {{ section.settings.section_text_color }}">{{ section.settings.icon_text }}</div>
+    </div>
+
+  </div>
+
+  </div>
+
+  <!-- Hero Image -->
+
+ <div class="convert-cat-optimized-hero-image-container">
+   <img  width="100%" height="" src="{% if section.settings.hero_image != blank %}{{ section.settings.hero_image }}{% else %}https://cdn.shopify.com/s/files/1/0726/6323/6890/files/IMG_2473_x1200.progressive_2d6daf0b-9a12-4026-a948-161c2688c9cf.webp?v=1757669540{% endif %}" alt="">
+ </div>  
+</section>
+
+<style>
+
+.convert-cat-optimized-hero-width {
+  max-width: 80%;
+}
+
+.convert-cat-optimized-hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.convert-cat-optimized-hero-content-container {
+  padding: 60px;
+}
+
+
+.convert-cat-optimized-hero-review-block {
+  display: flex;
+  gap: 10px; 
+}
+
+.convert-cat-optimized-hero-review-block .review-text {
+font-size: 14px;
+font-weight: medium;
+}
+
+.convert-cat-optimized-hero-text-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.convert-cat-optimized-hero-text-container h1 {
+  margin: 0px !important;
+  font-size: 44px;
+  line-height: 1.04;
+  font-weight: bold;
+}
+
+.convert-cat-optimized-hero-text-container p {
+  margin-bottom: 0px !important;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.convert-cat-hero-btn-parent-container {
+    width: 80%;
+}
+
+.convert-cat-optimized-hero-btn-container a {
+  text-align: center;
+  justify-content: center;
+  color: black;
+  display:block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight:bold;
+  width: 100%;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+}
+
+
+.convert-cat-optimized-hero-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex; 
+}
+
+.convert-cat-optimized-hero-image-container img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  display: block; 
+  border-radius: 0; 
+}
+
+
+.convert-cat-optimized-hero-review-block .stars{
+  line-height: 0;
+  display:flex;
+  gap: 2px;
+  align-items:center;
+}
+
+.convert-cat-optimized-hero-icon-text {
+display: flex;
+gap: 5px;
+align-items:center;
+justify-content: center;
+font-size: 14px;
+margin-top: 10px;
+line-height: 0;
+}
+
+.convert-cat-optimized-hero-bullets {
+  display:flex; 
+  gap: 20px; 
+  align-items:center;
+}
+
+
+
+.convert-cat-optimized-hero-bullets > div{
+padding: 4px 10px;
+border-radius: 4px; 
+width: fit-content;
+font-weight: bold;
+display: flex;
+gap: 5px;
+align-items:center;
+justify-content: center;
+font-size: 14px;
+line-height: 0;
+margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .convert-cat-optimized-hero-icon-text {
+
+font-size: 12px;
+}
+
+
+  .convert-cat-optimized-hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .convert-cat-optimized-hero-content-container {
+  padding: 20px;
+}
+
+
+  .convert-cat-hero-btn-parent-container {
+    width: 100%;
+}
+ 
+  .convert-cat-optimized-hero-container > div:first-child { order: 2; } 
+  .convert-cat-optimized-hero-container > div:last-child  { order: 1; } 
+
+  
+
+  .convert-cat-optimized-hero-review-block {
+  gap: 5px;
+  align-items:center;
+ justify-content: center;
+
+}
+
+.convert-cat-optimized-hero-text-container
+ {
+  max-width: 100%;
+  text-align: center;
+ }
+
+
+ .convert-cat-optimized-hero-text-container h1 {
+  font-size: 28px;
+}
+
+.convert-cat-optimized-hero-text-container p {
+  font-size: 14px;
+}
+
+.convert-cat-optimized-hero-review-block .review-text {
+font-size: 12px;
+}
+
+.convert-cat-optimized-hero-bullets {
+  justify-content:center;
+  gap: 10px;
+}
+
+
+}
+
+
+</style>
+
+{% schema %}
+{
+"name": "Optimized Hero",
+"settings": [
+{
+"type": "color",
+"id": "section_bg",
+"label": "Section background color",
+"default": "#CFD5CC"
+},
+{
+"type": "color",
+"id": "section_text_color",
+"label": "Section text color",
+"default": "#384243"
+},
+{
+"type": "text",
+"id": "review_text",
+"label": "Review text",
+"default": "Rated 4.8/5 | 'Excellent'"
+},
+{
+"type": "text",
+"id": "heading",
+"label": "Heading",
+"default": "ROOF TOP TENTS. EXPLORE. FREEDOM."
+},
+{
+"type": "text",
+"id": "bullet_text_1",
+"label": "Bullet Text 1",
+"default": "Quick Setup"
+},
+{
+"type": "text",
+"id": "bullet_text_2",
+"label": "Bullet Text 2",
+"default": "Portable"
+},
+{
+"type": "color",
+"id": "bullet_bg",
+"label": "Bullet Background Color",
+"default": "#B7C0B2"
+},
+{
+"type": "text",
+"id": "description",
+"label": "Description",
+"default": "Feel the difference with Roof Top Tent: More Travel. Less Stress. Pure Nature."
+},
+{
+"type": "text",
+"id": "button_text",
+"label": "Button text",
+"default": "SHOP THE RANGE"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "Button link",
+},
+{
+"type": "color",
+"id": "button_bg",
+"label": "Button background color",
+"default": "#384243"
+},
+{
+"type": "color",
+"id": "button_text_color",
+"label": "Button Text color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "icon_text",
+"label": "Guarantee Text",
+"default": "30-day Money Back Guarantee"
+},
+],
+"presets": [
+{
+"name": "Optimized Hero Section by ConvertCat",
+
+    }
+
+]
+}
+{% endschema %}`} />
+
+To install, please watch the below video <strong>(takes 2-3 minutes
+approx):</strong>
+
+<a class="youtube-video" href="https://youtu.be/Qq7umSWWvwk" target="_blank">
+  Watch Youtube Video
+</a>
